@@ -136,7 +136,7 @@ df %>%
   scale_alpha_continuous(labels=comma)
 
 ggsave("plot_carpet1.svg", width=6, height=6, units="in", dpi=dpi, device=svg)
-ggsave("plot_carpet1.png", width=6, height=6, units="in", dpi=dpi, device="png", type="cairo")
+ggsave("plot_carpet1.png", width=6, height=6, units="in", dpi=dpi, device="png")
 
 
 #### PLOT: carpet2 ####
