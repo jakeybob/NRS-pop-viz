@@ -57,7 +57,7 @@ y_breaks <- c(25e3, 50e3, 75e3)
 title_x <- 5
 title_y <- 1e4
 
-year <- 2019
+year <- 2020
 
 plot_data <- df %>%
   group_by(Year, age) %>%
@@ -84,8 +84,8 @@ plot_data %>%
   geom_text(aes(x=title_x, y=title_y, label=Year), size=25, colour="white", hjust="left", 
             family="", fontface="bold")
 
-ggsave("plot_age_dist_2019.svg", width=6, height=6, units="in", dpi=dpi, device=svg)
-ggsave("plot_age_dist_2019.png", width=6, height=6, units="in", dpi=dpi, device="png", type="cairo")
+ggsave("plot_age_dist_2020.svg", width=6, height=6, units="in", dpi=dpi, device=svg)
+ggsave("plot_age_dist_2020.png", width=6, height=6, units="in", dpi=dpi, device="png", type="cairo")
 
 
 #### PLOT: age dist animated ####
@@ -125,7 +125,7 @@ df %>%
   annotate("blank", x = 40, y = 2055) +  #  hack to add blank space at top
   annotate(geom = "segment", x = 19, y = 2050, xend = 19 , yend = 2044, 
            arrow = arrow(type="closed", length=unit(2, "mm")), colour=navy_blue, size=.2) +
-  annotate(geom = "label", x=19, y=2050, label="19 years old",
+  annotate(geom = "label", x=19, y=2050, label="19 year olds",
            colour=navy_blue, family="", fontface="bold", label.size = 1) + 
   scale_x_continuous(breaks = c(20, 40, 60, 80), expand = c(0,0)) +
   scale_y_continuous(breaks = c(1980, 2000, 2020, 2040), expand = c(0,0)) +
@@ -170,7 +170,7 @@ ggsave("plot_carpet2.svg", width=6, height=6, units="in", dpi=dpi, device=svg)
 ggsave("plot_carpet2.png", width=6, height=6, units="in", dpi=dpi, device="png")
 
 
-#### PLOT: 5 year pop evolutions ####
+#### PLOT: 10 year pop evolutions ####
 df %>%
   filter(age != 90, birth_year > 1895) %>%  #  remove composite age groups
   group_by(Year, birth_year) %>%
@@ -188,8 +188,8 @@ df %>%
   theme(legend.text = element_text(size=10, face="bold", colour = navy_blue, family=".SF Compact Text"),
         legend.title = element_text(size=10, face="bold", colour = navy_blue, family="")) 
 
-ggsave("plot_5years.svg", width=6, height=6, units="in", dpi=dpi, device=svg)
-ggsave("plot_5years.png", width=6, height=6, units="in", dpi=dpi, device="png")
+ggsave("plot_10years.svg", width=6, height=6, units="in", dpi=dpi, device=svg)
+ggsave("plot_10years.png", width=6, height=6, units="in", dpi=dpi, device="png")
 
 
 #### PLOT: birth year % animation ####
