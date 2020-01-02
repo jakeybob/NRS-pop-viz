@@ -125,7 +125,7 @@ df %>%
   annotate("blank", x = 40, y = 2055) +  #  hack to add blank space at top
   annotate(geom = "segment", x = 19, y = 2050, xend = 19 , yend = 2044, 
            arrow = arrow(type="closed", length=unit(2, "mm")), colour=navy_blue, size=.2) +
-  annotate(geom = "label", x=19, y=2050, label="19 year olds",
+  annotate(geom = "label", x=19, y=2050, label="19-year-olds",
            colour=navy_blue, family="", fontface="bold", label.size = 1) + 
   scale_x_continuous(breaks = c(20, 40, 60, 80), expand = c(0,0)) +
   scale_y_continuous(breaks = c(1980, 2000, 2020, 2040), expand = c(0,0)) +

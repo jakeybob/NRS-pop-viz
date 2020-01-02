@@ -1,5 +1,5 @@
 # NRS Populations Data Visualisations
-Some data visualisations created from [NRS](https://www.nrscotland.gov.uk) population data (estimates and projections), using [R](https://www.r-project.org) and [ggplot](https://ggplot2.tidyverse.org). Data was obtained from the [NHS Scotland](https://www.scot.nhs.uk) [CKAN](https://ckan.org) [OpenData](https://www.opendata.nhs.scot) portal, using [ckanr](https://github.com/ropensci/ckanr). Animations were produced using [gganimate](https://github.com/thomasp85/gganimate). Code can be found [here](NRS_populations_viz.R).
+Some data visualisations created from [NRS](https://www.nrscotland.gov.uk) population data (estimates and projections), using [R](https://www.r-project.org) and [ggplot](https://ggplot2.tidyverse.org). Data was obtained from the [NHS Scotland](https://www.scot.nhs.uk) [CKAN](https://ckan.org) [OpenData](https://www.opendata.nhs.scot) portal, using [ckanr](https://github.com/ropensci/ckanr). Animations were produced using [gganimate](https://github.com/thomasp85/gganimate). Code can be found [here](NRS_populations_viz.R), and a slightly more detailed blog post [here](blog.bobtaylor.xyz/population-data-viz/).
 
 
 ## Age Distribution | 2020
@@ -47,20 +47,20 @@ Population curves for different birth year groups (one per decade).
 * the 1990 - 2020 groups show the increase in population at about 19 years old that was visible in previous plots
 
 
-## Animated Annual Relative Change in Population, by Birth Year
-By comparing the population to that in the preceding year, we can see how much the population changes in each birth year group; e.g. if there are 10,000 people who were born in 1940, alive in 1980, and in 1981 this has changed to 9,500 people, the change would be -5%. The above animation shows this plot for each birth year group.
+## Animated Annual Relative Change in Population
+By comparing the population to that in the preceding year, we can see how much the population changes in each birth year group; e.g. if there are 10,000 people who were born in 1940, alive in 1980, and in 1981 this has changed to 9,500 people, the change would be -5%. The animation below shows this plot for each birth year group.
 
 ![Animated annual relative change in population, by birth year](plot_birth_year_change_anim.gif)
 
 * the red dotted lines represent projected data
 * as you would expect, the is larger *negative* change towards larger age
-* as noted previously, one significant feature is the increase in population in 19-year-olds from the mid 1980s onward
+* as noted previously, one significant feature is the increase in population in 19-year-olds from the mid-1980s onward
 
 
 ## **Unknown Pleasures** Ripoffs
 Inspired by the [famous](https://blogs.scientificamerican.com/sa-visual/pop-culture-pulsar-origin-story-of-joy-division-s-unknown-pleasures-album-cover-video/) [pulsar](https://en.wikipedia.org/wiki/PSR_B1919%2B21) timing chart / Joy Division album [cover](https://www.google.com/search?q=unknown+pleasures&bih=837&biw=1440&hl=en-GB&sxsrf=ACYBGNTyRWgVql-yZuNNQVfS3d7hamRTBg:1577980303072&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj7-bTbouXmAhVoQEEAHVHCA7QQ_AUoAXoECBEQAw).
 
-The data is identical to the animated plot above, but with each birth year stacked vertically rather than animated. The *smoothness* of the projected (red) data, compared to the estimated data, is quite visible 
+The data is identical to the animated plot above, but with each birth year stacked vertically rather than animated. The *smoothness* of the projected (red) data, compared to the estimated data, is quite visible. 
 ![](plot_unknown_pleasures.png)
 
 
